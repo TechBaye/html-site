@@ -1,0 +1,228 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.5; /* Reduced line-height for more compact text */
+}
+
+#top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #343a40;
+    color: #fff;
+    padding: 0.5rem 1rem; /* Reduced padding */
+}
+
+#top-header .social-icons {
+    display: flex;
+}
+
+#top-header .social-icons a {
+    margin-right: 0.75rem; /* Reduced margin */
+    color: #007bff; /* Company blue color */
+    text-decoration: none;
+    font-size: 1rem; /* Further reduced font size */
+}
+
+#top-header .social-icons a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+#top-header nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#top-header nav ul li {
+    margin-left: 0.75rem; /* Reduced margin */
+}
+
+#top-header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem; /* Slightly smaller font size */
+}
+
+header#main-header {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to bottom, #007bff 50%, #343a40 50%);
+    color: #fff;
+    padding: 0.75rem 1.5rem; /* Reduced padding */
+    position: relative;
+}
+
+header#main-header::after {
+    content: '';
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    z-index: 0;
+}
+
+header#main-header .logo {
+    z-index: 1;
+}
+
+header#main-header .logo img {
+    max-height: 80px; /* Reduced logo size for better scaling */
+    width: auto;
+}
+
+#video-banner {
+    position: relative;
+    width: 100%;
+    height: 350px; /* Further reduced height */
+    overflow: hidden;
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the container */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    width: 100%;
+}
+
+.intro-text {
+    max-width: 700px; /* Slightly reduced max-width */
+    margin: 0 auto;
+    padding: 1rem; /* Further reduced padding */
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+.intro-text h1 {
+    font-size: 1.5rem; /* Adjusted font size */
+    margin-bottom: 0.75rem; /* Reduced margin */
+}
+
+.intro-text p {
+    margin-bottom: 0.75rem; /* Reduced margin */
+}
+
+.intro-text ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5rem;
+}
+
+.intro-text ul li {
+    margin-bottom: 0.25rem; /* Reduced margin */
+}
+
+section {
+    padding: 1.5rem 1rem; /* Reduced section padding */
+    max-width: 1900px;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 0.75rem; /* Reduced margin */
+    color: #007bff;
+}
+
+.product,
+.service {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0.75rem; /* Reduced padding */
+    margin-bottom: 0.75rem; /* Reduced margin */
+    text-align: center;
+}
+
+.product img {
+    max-width: 100px; /* Adjusted product image size */
+    height: auto;
+    margin-bottom: 0.75rem; /* Reduced margin */
+}
+
+footer {
+    text-align: center;
+    padding: 0.75rem; /* Reduced padding */
+    background: linear-gradient(to bottom, #007bff 50%, #343a40 50%);
+    color: #fff;
+}
+
+.footer-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.footer-banner .logo img {
+    max-height: 80px; /* Adjusted logo height for the footer */
+    width: auto;
+}
+
+footer nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center; /* Center align the navigation links */
+}
+
+footer nav ul li {
+    margin-left: 0.75rem; /* Reduced margin */
+}
+
+footer nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem; /* Adjusted font size */
+}
+
+footer p {
+    margin-top: 0.75rem; /* Reduced margin */
+    margin-bottom: 0; /* Remove default margin for paragraph */
+}
+
+/* GIF container styling */
+.gif-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2; /* Layer above the banner's ::after pseudo-element */
+    overflow: hidden; /* Hide overflow */
+    width: 100px; /* Set desired width */
+    height: 100px; /* Set desired height */
+}
+
+.looping-gif {
+    max-width: 100%; /* Ensure the GIF fits the container */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.5s ease; /* Smooth transition */
+}
+
+/* Move GIF out on hover */
+.gif-container:hover .looping-gif {
+    transform: translate(-50%, -150%) scale(1); /* Move up and scale down */
+}
